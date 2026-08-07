@@ -467,12 +467,12 @@ Before declaring the design done, answer every question below. All answers must 
 - [ ] Are there any fictional testimonials (AI avatars, random names or job titles)? *(R-18)*
 - [ ] Do all elements use the same template animations simultaneously (Fade Up + Floating + Scale + Bounce) without a clear UX purpose? *(R-19)*
 - [ ] Does the design still feel generic even if the logo and product name are swapped? *(R-20)*
-- [ ] Is dark mode used as the default solely because it looks "tech", without branding consideration? *(R-21)*
+- [ ] Was dark mode forced as a default without a branding/user reason, or was a required light/dark toggle deferred with an excuse? *(R-21)*
 - [ ] Are there generic illustrations (Undraw, Storyset, 3D blob) with no real connection to the product? *(R-22)*
 - [ ] Were any visual assets (logo, avatar/profile photo, statistics, testimonials, or navigation structure) created without explicit instructions or confirmation? *(R-23)*
 - [ ] Are there navbar links pointing to sections or pages that do not exist? *(R-24)*
 - [ ] Is there any text with contrast below the WCAG AA standard (4.5:1 for normal text, 3:1 for large text)? *(R-25)*
-- [ ] Are there any buttons, dropdowns, or forms that don't work without a `// TODO` comment? *(R-26)*
+- [ ] Are there any buttons, dropdowns, or forms that do nothing, with no real behavior and no `// TODO` + visible label? *(R-26)*
 - [ ] Does the UI lack an empty state, loading state, or error state? *(R-27)*
 - [ ] Does the FAQ contain generic questions that are not relevant to the product? *(R-28)*
 - [ ] Does the color palette exceed 2-3 core colors + 1 accent without a clear design system? *(R-29)*
