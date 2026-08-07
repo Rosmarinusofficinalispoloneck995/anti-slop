@@ -98,6 +98,7 @@ These are the most common patterns found in AI-generated designs. Use as a refer
 | **AI Marketing Buzzwords** | AI Powered, Revolutionary, Next Generation, Seamless, Cutting Edge |
 | **Fake Statistics** | 10K+ Users, 99.9% Uptime, 500M Requests, 120+ Countries |
 | **Fake Testimonials** | AI avatars, random names, random job titles, fictional reviews |
+| **Fabricated Trust Claims** | "SOC 2 compliant", "ISO 27001", "Enterprise-grade security", "300% faster" for a product with no such evidence |
 
 ### Decorative Elements
 
@@ -119,6 +120,7 @@ These are the most common patterns found in AI-generated designs. Use as a refer
 | **Irrelevant FAQ** | FAQ contains generic template questions ("Is my data secure?", "Can I cancel anytime?") with no real relevance to the product |
 | **Assumed Logo & Profile Photos** | Creating app logos, avatars, or profile photos without explicit instructions, generated purely on assumption |
 | **Navbar Links to Nowhere** | Navbar contains links to pages (Features, Contact, About, etc.) that have no actual section or page |
+| **File/CSS Patching via Script** | A feature (e.g. dark mode) added by an external script that rewrites source or CSS with string replacement. Signs: a `.py`/`.js` helper doing `str.replace` on `.css` files, "patch" scripts left in the repo |
 
 ### Identity & Originality
 
