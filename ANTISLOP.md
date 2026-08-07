@@ -5,6 +5,16 @@
 
 ---
 
+## What This Is (and What It Isn't)
+
+`ANTISLOP.md` is a **filter**, not a style guide. It stops AI coding agents from producing generic, recognizable "AI slop" UI.
+
+- This document does **not** impose an aesthetic: no prescribed colors, fonts, layouts, or "house style".
+- Design preferences, brand direction, and visual taste are yours.
+- This document does two things only:
+  1. Lists generic AI patterns to avoid.
+  2. Holds the result to a craftsmanship bar: intentional, functional, complete, evidence-based.
+
 ## Core Principle
 
 Every visual decision must have a **clear reason**, improve the user experience, and build a unique product identity.
@@ -14,6 +24,35 @@ The question to answer before calling anything done:
 > If the logo and product name were swapped out, would this design still feel unique and have its own character?
 
 If the answer is **no**, the design is too generic. Start over.
+
+A design is **done** only when all three are true:
+1. It avoids the slop patterns in this document.
+2. It has its own identity and character.
+3. It actually works (see The Craftsmanship Standard).
+
+## The Craftsmanship Standard
+
+"Not slop" is the floor, not the goal. A design passes when it meets five preference-agnostic criteria. Use these as questions, not recipes.
+
+### C-1 — Intentionality
+
+Every visual and copy decision has a reason you can articulate. If the only reason is "it's the AI default", that is a red flag: revisit the decision.
+
+### C-2 — Functional Completeness
+
+Every interactive element works, or it does not exist. A button that cannot do anything is a defect, not decoration.
+
+### C-3 — Content-Driven Composition
+
+Every section exists because the product's content needs it, not because every AI landing page has one. Remove sections that only fill a template.
+
+### C-4 — Resilience
+
+The UI holds up in every state (empty, loading, error), every theme you ship, every breakpoint, and keyboard-only use.
+
+### C-5 — Evidence Over Claims
+
+Anything presented as fact (testimonials, statistics, security claims) is real and verifiable, or it is not shown at all.
 
 ---
 
