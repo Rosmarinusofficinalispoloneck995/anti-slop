@@ -177,7 +177,7 @@ These are the most common patterns found in AI-generated designs. Use as a refer
 - **FORBIDDEN**: generic "Trusted By" logo bar directly below the hero
 - **FORBIDDEN**: 4-column template footer with Product / Company / Resources / Legal and no variation
 - Every page must have a structure built around **actual content needs**
-- Section order must follow the product's narrative flow, not the AI default order
+- Section order must follow the product's narrative flow, not the AI default order (see Craftsmanship Standard C-3)
 
 ### R-06 — Typography
 
@@ -268,13 +268,15 @@ These are the most common patterns found in AI-generated designs. Use as a refer
 - The design must have a strong identity: a specific palette, a typeface chosen for a reason, a unique composition
 - Every section must have a clear hierarchy
 - Layout is built around the actual product content needs
+- Identity comes from deliberate, explained choices, not from adding decoration (see Craftsmanship Standard C-1)
 
 ### R-21 — Dark Mode
 
 - Choose a theme based on brand identity, product type, and target users
-- Dark mode that fits the product's character is a valid choice (code editors, terminals, developer tools, and creative tools have strong reasons for dark default)
-- **FORBIDDEN**: making dark mode the default solely because it looks "tech" or modern, without branding consideration
-- If there is no clear reason from a brand or user perspective, give the user a choice
+- Developer tools, terminals, and creative tools have strong, legitimate reasons for a dark default. Use that reason, not "dark looks tech"
+- If the product has no strong reason for a fixed theme, **build a working light/dark toggle**. "Give the user a choice" means build the toggle, not defer the work
+- **FORBIDDEN**: using this rule (or any rule) as an excuse to skip or defer requested work. If the product should support dark mode, implement it now
+- A theme toggle you ship must work correctly in BOTH modes. A dark mode that breaks the light mode is a defect (see R-34)
 
 ### R-22 — Illustrations
 
@@ -316,11 +318,18 @@ These are the most common patterns found in AI-generated designs. Use as a refer
 
 ### R-26 — Interactive Elements
 
-- Every visible interactive element **must function** or be clearly labeled as not yet implemented
-- **FORBIDDEN**: buttons that do nothing without a comment or label
-- **FORBIDDEN**: dropdowns, tabs, or accordions that cannot be opened
-- **FORBIDDEN**: forms that cannot be submitted or produce no response
-- If a feature is built as a placeholder, add a clear code comment: `// TODO: implement`
+Every interactive element must have a real behavior, or be removed:
+
+- A link or button that scrolls to an existing section (real `href="#..."`)
+- A modal or dialog that opens and closes (closable with Escape)
+- A state toggle (mobile menu, theme, accordion, tabs)
+- An external action (`mailto:`, a real product URL)
+- A form that submits and shows feedback
+
+**FORBIDDEN**: buttons and links that do nothing
+**FORBIDDEN**: nav items pointing to sections that do not exist (see R-24)
+
+If an element genuinely cannot have a destination yet, remove it instead of shipping a dead control. A placeholder is acceptable only with a clear `// TODO` comment in code AND a visible label to the user (e.g. "Coming soon"). See "Functional Patterns" below.
 
 ### R-27 — UI States
 
@@ -377,6 +386,32 @@ If no reason can be articulated, the decision is not yet valid and must be revis
 - **REQUIRED**: every focused element must have a clearly visible focus indicator
 - **FORBIDDEN**: removing the focus outline with `outline: none` or `outline: 0` without replacing it with a better custom focus indicator
 - A UI that can only be used with a mouse is an unfinished UI
+
+### R-33 — No File/CSS Patching via Scripts
+
+- **FORBIDDEN**: implementing or altering UI features by running an external script that rewrites source files or CSS with string replacement
+- Build features directly in the source code where they belong
+- A feature added by a patch script (e.g. a Python script editing `.css` files) is broken by design and must be rewritten in source
+
+### R-34 — Every Theme You Ship Must Work
+
+- If you ship a theme toggle, BOTH modes must be fully functional
+- Contrast, colors, and every component must be verified in each mode
+- **FORBIDDEN**: shipping a mode where base styles, fonts, or layout break
+
+### R-35 — Verify Before You Deliver
+
+- Run or build the app before declaring the task done
+- Check the console for errors
+- Exercise every interactive element
+- Check every theme and the mobile breakpoints
+- A design that has never been run is not finished
+
+### R-36 — No Fabricated Claims
+
+- **FORBIDDEN**: inventing security, compliance, or performance claims ("SOC 2 compliant", "ISO 27001", "300% faster") without real evidence
+- **FORBIDDEN**: fake testimonials, fake statistics, fake names (see R-17, R-18)
+- If there is no real data, show no claim
 
 ---
 
