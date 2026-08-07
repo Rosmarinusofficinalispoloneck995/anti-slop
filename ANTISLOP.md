@@ -430,7 +430,20 @@ If none of these applies to an element, the element should not exist.
 
 ---
 
-## Pre-Ship Checklist
+## Delivery Gate (Mandatory)
+
+Run this gate BEFORE delivering. Output its status with your deliverable.
+If any answer is **yes**, do not deliver: fix it first, then re-run.
+
+### Craftsmanship Standard
+
+- [ ] C-1: Is there any visual or copy decision whose only justification is "it's the AI default"? *(Intentionality)*
+- [ ] C-2: Does any interactive element do nothing, with no clear label? *(Functional Completeness)*
+- [ ] C-3: Does any section exist only to fill an AI template, not to serve the product's content? *(Content-Driven Composition)*
+- [ ] C-4: Does the UI break in any state, theme, breakpoint, or without a mouse? *(Resilience)*
+- [ ] C-5: Is any testimonial, statistic, or claim fabricated? *(Evidence Over Claims)*
+
+### Rule Checklist
 
 Before declaring the design done, answer every question below. All answers must be **no**:
 
@@ -466,5 +479,9 @@ Before declaring the design done, answer every question below. All answers must 
 - [ ] Does the overall design look like a clone of another popular product (Linear, Vercel, Stripe, Notion, etc.)? *(R-30)*
 - [ ] Is there any design decision (color, layout, typography, spacing, cards, illustrations/icons) that cannot be explained with a clear reason? *(R-31)*
 - [ ] Can the UI not be navigated by keyboard (Tab, Enter, Escape) or is there no visible focus state? *(R-32)*
+- [ ] Was any feature added by patching source/CSS with an external script instead of writing it in source? *(R-33)*
+- [ ] If a theme toggle exists, does one mode (light or dark) break styles, fonts, or layout? *(R-34)*
+- [ ] Was the app run/built and every interactive element exercised before delivery? *(R-35)*
+- [ ] Are there any fabricated security, compliance, performance, or customer claims? *(R-36)*
 
-**If even one answer is "yes", fix it before moving on.**
+If even one answer is **yes**, do not deliver. Fix it, re-run the gate, and only then ship. Delivery without a clean gate is a failure.
