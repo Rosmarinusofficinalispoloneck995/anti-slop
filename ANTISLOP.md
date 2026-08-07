@@ -415,6 +415,21 @@ If no reason can be articulated, the decision is not yet valid and must be revis
 
 ---
 
+## Functional Patterns
+
+"What works" means one of these, depending on context:
+
+- **Anchor to a real section**: `href="#pricing"` where `#pricing` exists
+- **Scroll to relevant content** for a "Learn more" style link
+- **Open a modal or dialog** for a quick action (closable with Escape)
+- **Toggle a state**: mobile menu, theme, accordion, tabs
+- **External action**: `mailto:`, a real product URL
+- **Form submit** with visible feedback
+
+If none of these applies to an element, the element should not exist.
+
+---
+
 ## Pre-Ship Checklist
 
 Before declaring the design done, answer every question below. All answers must be **no**:
