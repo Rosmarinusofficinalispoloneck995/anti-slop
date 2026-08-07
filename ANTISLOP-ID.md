@@ -5,15 +5,54 @@
 
 ---
 
+## Apa Ini (dan Bukan Apa Ini)
+
+`ANTISLOP.md` adalah **filter**, bukan style guide. Ia menghentikan AI coding agent untuk menghasilkan UI "AI slop" yang generik dan mudah dikenali.
+
+- Dokumen ini **tidak** memaksakan aesthetic: tidak ada warna, font, layout, atau "house style" yang ditetapkan.
+- Preferensi desain, arah brand, dan selera visual tetap milik kamu.
+- Dokumen ini hanya melakukan dua hal:
+  1. Mendaftar pola generik AI yang harus dihindari.
+  2. Menahan hasil pada standar craftsmanship: intentional, fungsional, lengkap, berbasis bukti.
+
 ## Prinsip Utama
 
 Setiap keputusan visual harus memiliki **alasan yang jelas**, meningkatkan pengalaman pengguna, dan membangun identitas produk yang unik.
 
-Pertanyaan yang harus selalu dijawab sebelum selesai:
+Pertanyaan yang harus selalu dijawab sebelum menyatakan selesai:
 
 > Jika logo dan nama produk diganti, apakah desain ini masih terasa unik dan memiliki karakter?
 
 Jika jawabannya **tidak**, berarti desain terlalu generik. Ulangi.
+
+Suatu desain **selesai** hanya ketika ketiganya benar:
+1. Bebas dari pola slop dalam dokumen ini.
+2. Memiliki identitas dan karakter sendiri.
+3. Benar-benar berfungsi (lihat Standar Craftsmanship).
+
+## Standar Craftsmanship
+
+"Bukan slop" adalah batas bawah, bukan tujuan. Sebuah desain lulus ketika memenuhi lima kriteria yang netral terhadap selera. Gunakan ini sebagai pertanyaan, bukan resep.
+
+### C-1 — Intentionalitas
+
+Setiap keputusan visual dan copy punya alasan yang bisa kamu jelaskan. Jika satu-satunya alasan adalah "itu default AI", itu red flag: tinjau ulang keputusan tersebut.
+
+### C-2 — Kelengkapan Fungsional
+
+Setiap elemen interaktif berfungsi, atau tidak ada. Tombol yang tidak bisa melakukan apa pun adalah cacat, bukan dekorasi.
+
+### C-3 — Komposisi Berbasis Konten
+
+Setiap section ada karena konten produk membutuhkannya, bukan karena semua landing page AI memilikinya. Hapus section yang hanya mengisi template.
+
+### C-4 — Ketahanan
+
+UI tetap kokoh di setiap state (kosong, memuat, error), setiap tema yang kamu kirim, setiap breakpoint, dan penggunaan hanya dengan keyboard.
+
+### C-5 — Bukti di Atas Klaim
+
+Apa pun yang disajikan sebagai fakta (testimonial, statistik, klaim keamanan) harus nyata dan bisa diverifikasi, atau tidak ditampilkan sama sekali.
 
 ---
 
@@ -31,7 +70,7 @@ Berikut adalah pola-pola yang paling sering muncul pada desain hasil AI. Gunakan
 | **Shadow Terlalu Lembut** | Semua komponen punya shadow besar, seluruh halaman terasa melayang |
 | **Glow Dimana-Mana** | Glow pada card, tombol, icon, badge, background, border secara bersamaan |
 | **Background Grid** | Kotak-kotak, blueprint, graph paper, garis tipis horizontal-vertikal |
-| **Terlalu Banyak Dekorasi / Menumpuk Tren** | Blob, mesh gradient, glow, noise, pattern, grid tanpa fungsi — apalagi jika beberapa tren dipakai sekaligus (mis. Glassmorphism + Mesh Gradient + Glow + Monospace + Grid + Rounded UI) |
+| **Terlalu Banyak Dekorasi / Menumpuk Tren** | Blob, mesh gradient, glow, noise, pattern, grid tanpa fungsi, apalagi jika beberapa tren dipakai sekaligus (mis. Glassmorphism + Mesh Gradient + Glow + Monospace + Grid + Rounded UI) |
 | **Dark Mode Default Tanpa Alasan** | Seluruh halaman gelap hanya karena terlihat "tech", tanpa pertimbangan branding |
 | **Terlalu Banyak Warna dalam Palette** | Memakai 5-7 warna berbeda dalam satu halaman tanpa design system yang jelas |
 | **Warna Aksen Berlebihan** | Satu warna aksen di tombol, icon, badge, link, garis, background, glow |
@@ -59,6 +98,7 @@ Berikut adalah pola-pola yang paling sering muncul pada desain hasil AI. Gunakan
 | **Buzzword Marketing AI** | AI Powered, Revolutionary, Next Generation, Seamless, Cutting Edge |
 | **Statistik Palsu** | 10K+ Users, 99.9% Uptime, 500M Requests, 120+ Countries |
 | **Testimonial Palsu** | Avatar AI, nama acak, jabatan acak, review fiktif |
+| **Klaim Kepercayaan Karangan** | "SOC 2 compliant", "ISO 27001", "Enterprise-grade security", "300% faster" untuk produk yang tidak punya bukti apa pun |
 
 ### Elemen Dekoratif
 
@@ -75,11 +115,12 @@ Berikut adalah pola-pola yang paling sering muncul pada desain hasil AI. Gunakan
 
 | Pola | Ciri Khas |
 |------|-----------|
-| **Elemen Interaktif Tidak Berfungsi** | Tombol tidak melakukan apapun, dropdown tidak terbuka, form tidak bisa disubmit. AI bikin tampilan tapi lupa bikin fungsinya |
+| **Elemen Interaktif Tidak Berfungsi** | Tombol tidak melakukan apa pun, dropdown tidak terbuka, form tidak bisa disubmit. AI bikin tampilan tapi lupa bikin fungsinya |
 | **Desain Hanya untuk Happy Path** | Tidak ada empty state, loading state, atau error state. UI terlihat sempurna di screenshot tapi tidak siap dipakai nyata |
-| **FAQ Tidak Relevan** | Pertanyaan FAQ berisi template generic ("Is my data secure?", "Can I cancel anytime?") tanpa relevansi nyata dengan produk |
+| **FAQ Tidak Relevan** | Pertanyaan FAQ berisi template generik ("Is my data secure?", "Can I cancel anytime?") tanpa relevansi nyata dengan produk |
 | **Logo & Foto Profil Asal Bikin** | Membuat logo aplikasi, avatar, atau foto profil tanpa instruksi eksplisit, asal generate berdasarkan asumsi |
 | **Navbar Link Tanpa Konten** | Navbar berisi link ke halaman (Features, Contact, About, dll.) yang tidak ada section atau halamannya sama sekali |
+| **Patching File/CSS via Script** | Fitur (mis. dark mode) ditambahkan oleh script eksternal yang menulis ulang source atau CSS dengan string replacement. Tanda: helper `.py`/`.js` yang melakukan `str.replace` pada file `.css`, script "patch" yang tertinggal di repo |
 
 ### Identitas & Orisinalitas
 
@@ -136,7 +177,7 @@ Berikut adalah pola-pola yang paling sering muncul pada desain hasil AI. Gunakan
 - **DILARANG**: "Trusted By" logo bar generik langsung di bawah hero
 - **DILARANG**: footer 4 kolom template Product / Company / Resources / Legal tanpa variasi
 - Setiap halaman harus memiliki struktur yang dibuat berdasarkan **kebutuhan konten nyata**
-- Urutan section harus mengikuti alur narasi produk, bukan urutan default AI
+- Urutan section harus mengikuti alur narasi produk, bukan urutan default AI (lihat Standar Craftsmanship C-3)
 
 ### R-06 — Typography
 
@@ -227,13 +268,15 @@ Berikut adalah pola-pola yang paling sering muncul pada desain hasil AI. Gunakan
 - Desain harus memiliki identitas yang kuat: palette spesifik, typeface yang dipilih dengan alasan, komposisi yang unik
 - Setiap section harus memiliki hierarchy yang jelas
 - Layout dibuat berdasarkan kebutuhan konten produk
+- Identitas berasal dari pilihan yang disengaja dan dijelaskan, bukan dari menambah dekorasi (lihat Standar Craftsmanship C-1)
 
 ### R-21 — Dark Mode
 
 - Pilih tema berdasarkan identitas brand, jenis produk, dan target pengguna
-- Dark mode yang sesuai dengan karakter produk adalah pilihan yang valid (code editor, terminal, developer tool, creative tool memiliki alasan kuat untuk dark default)
-- **DILARANG**: menjadikan dark mode sebagai default semata-mata karena terlihat "tech" atau modern, tanpa pertimbangan branding
-- Jika tidak ada alasan yang jelas dari sisi brand atau pengguna, berikan pilihan kepada user
+- Developer tools, terminal, dan creative tools punya alasan kuat dan sah untuk dark default. Gunakan alasan itu, bukan "dark terlihat tech"
+- Jika produk tidak punya alasan kuat untuk tema tetap, **bangun toggle light/dark yang berfungsi**. "Beri user pilihan" berarti bangun toggle-nya, bukan menunda pekerjaan
+- **DILARANG**: menggunakan rule ini (atau rule apapun) sebagai alasan untuk melewati atau menunda pekerjaan yang diminta. Jika produk seharusnya mendukung dark mode, implementasikan sekarang
+- Theme toggle yang kamu kirim harus bekerja benar di KEDUA mode. Dark mode yang merusak light mode adalah cacat (lihat R-34)
 
 ### R-22 — Ilustrasi
 
@@ -275,11 +318,18 @@ Berikut adalah pola-pola yang paling sering muncul pada desain hasil AI. Gunakan
 
 ### R-26 — Elemen Interaktif
 
-- Setiap elemen interaktif yang terlihat **harus berfungsi** atau diberi keterangan jelas bahwa belum diimplementasi
-- **DILARANG**: tombol yang tidak melakukan apapun tanpa komentar/label
-- **DILARANG**: dropdown, tab, accordion yang tidak bisa dibuka
-- **DILARANG**: form yang tidak bisa disubmit atau tidak ada response-nya
-- Jika sebuah fitur dibuat sebagai placeholder, beri komentar kode yang jelas: `// TODO: implement`
+Setiap elemen interaktif harus memiliki perilaku nyata, atau dihapus:
+
+- Link atau tombol yang scroll ke section yang benar-benar ada (real `href="#..."`)
+- Modal atau dialog yang terbuka dan tertutup (bisa ditutup dengan Escape)
+- State toggle (menu mobile, tema, accordion, tabs)
+- Aksi eksternal (`mailto:`, URL produk yang nyata)
+- Form yang submit dan menampilkan feedback
+
+**DILARANG**: tombol dan link yang tidak melakukan apa pun
+**DILARANG**: item nav yang mengarah ke section yang tidak ada (lihat R-24)
+
+Jika sebuah elemen benar-benar belum punya destination, hapus elemen tersebut daripada mengirim kontrol mati. Placeholder hanya diperbolehkan dengan komentar `// TODO` yang jelas di kode DAN label yang terlihat oleh user (mis. "Coming soon"). Lihat "Pola Fungsional" di bawah.
 
 ### R-27 — UI States
 
@@ -337,11 +387,65 @@ Jika tidak ada alasan yang bisa dijelaskan, keputusan tersebut belum valid dan h
 - **DILARANG**: menghilangkan outline focus dengan `outline: none` atau `outline: 0` tanpa menggantinya dengan indikator fokus custom yang lebih baik
 - UI yang hanya bisa dipakai dengan mouse adalah UI yang belum selesai
 
+### R-33 — Dilarang Patching File/CSS via Script
+
+- **DILARANG**: mengimplementasikan atau mengubah fitur UI dengan menjalankan script eksternal yang menulis ulang source file atau CSS dengan string replacement
+- Bangun fitur langsung di source code tempatnya berada
+- Fitur yang ditambahkan oleh patch script (mis. script Python yang mengedit file `.css`) rusak sejak awal dan harus ditulis ulang di source
+
+### R-34 — Setiap Tema yang Dikirim Harus Berfungsi
+
+- Jika kamu mengirim theme toggle, KEDUA mode harus berfungsi penuh
+- Kontras, warna, dan setiap komponen harus diverifikasi di masing-masing mode
+- **DILARANG**: mengirim mode di mana base styles, font, atau layout rusak
+
+### R-35 — Verifikasi Sebelum Menyerahkan
+
+- Jalankan atau build app sebelum menyatakan tugas selesai
+- Cek console untuk error
+- Uji setiap elemen interaktif
+- Cek setiap tema dan breakpoint mobile
+- Desain yang tidak pernah dijalankan adalah desain yang belum selesai
+
+### R-36 — Dilarang Klaim Karangan
+
+- **DILARANG**: mengarang klaim keamanan, kepatuhan, atau performa ("SOC 2 compliant", "ISO 27001", "300% faster") tanpa bukti nyata
+- **DILARANG**: testimonial palsu, statistik palsu, nama palsu (lihat R-17, R-18)
+- Jika tidak ada data nyata, jangan tampilkan klaim apa pun
+
 ---
 
-## Checklist Sebelum Selesai
+## Pola Fungsional
 
-Sebelum menyatakan desain selesai, jawab semua pertanyaan ini. Semua harus dijawab **tidak**:
+"Apa yang dimaksud berfungsi" berarti salah satu dari ini, tergantung konteks:
+
+- **Anchor ke section yang nyata**: `href="#pricing"` di mana `#pricing` benar-benar ada
+- **Scroll ke konten yang relevan** untuk link gaya "Learn more"
+- **Buka modal atau dialog** untuk aksi cepat (bisa ditutup dengan Escape)
+- **Toggle state**: menu mobile, tema, accordion, tabs
+- **Aksi eksternal**: `mailto:`, URL produk yang nyata
+- **Submit form** dengan feedback yang terlihat
+
+Jika tidak ada satu pun yang berlaku untuk sebuah elemen, elemen itu seharusnya tidak ada.
+
+---
+
+## Delivery Gate (Wajib)
+
+Jalankan gate ini SEBELUM menyerahkan. Sertakan statusnya bersama hasil kirimanmu.
+Jika salah satu jawaban **ya**, jangan serahkan: perbaiki dulu, lalu jalankan ulang.
+
+### Standar Craftsmanship
+
+- [ ] C-1: Apakah ada keputusan visual atau copy yang satu-satunya pembenarannya adalah "itu default AI"? *(Intentionalitas)*
+- [ ] C-2: Apakah ada elemen interaktif yang tidak melakukan apa pun tanpa label yang jelas? *(Kelengkapan Fungsional)*
+- [ ] C-3: Apakah ada section yang hanya ada untuk mengisi template AI, bukan melayani konten produk? *(Komposisi Berbasis Konten)*
+- [ ] C-4: Apakah UI rusak di state, tema, breakpoint mana pun, atau tanpa mouse? *(Ketahanan)*
+- [ ] C-5: Apakah ada testimonial, statistik, atau klaim yang dikarang? *(Bukti di Atas Klaim)*
+
+### Checklist Rules
+
+Sebelum menyatakan desain selesai, jawab semua pertanyaan di bawah ini. Semua jawaban harus **tidak**:
 
 - [ ] Apakah ada gradient biru-ungu/biru-cyan/ungu-pink, background glow berwarna, atau tombol biru neon sebagai default tanpa alasan branding? *(R-01)*
 - [ ] Apakah ada em dash (`—`) dalam teks? *(R-02)*
@@ -363,17 +467,21 @@ Sebelum menyatakan desain selesai, jawab semua pertanyaan ini. Semua harus dijaw
 - [ ] Apakah ada testimonial fiktif (avatar AI, nama atau jabatan acak)? *(R-18)*
 - [ ] Apakah semua elemen memakai animasi template yang sama sekaligus (Fade Up + Floating + Scale + Bounce) tanpa tujuan UX yang jelas? *(R-19)*
 - [ ] Apakah desain masih terasa generik meski logo dan nama produk diganti? *(R-20)*
-- [ ] Apakah dark mode dipakai sebagai default hanya karena terlihat "tech", tanpa pertimbangan branding? *(R-21)*
+- [ ] Apakah dark mode dipaksa sebagai default tanpa alasan branding/user, atau toggle light/dark yang dibutuhkan ditunda dengan alasan? *(R-21)*
 - [ ] Apakah ada ilustrasi generik (Undraw, Storyset, blob 3D) tanpa hubungan nyata dengan produk? *(R-22)*
 - [ ] Apakah ada aset visual (logo, avatar/foto profil, statistik, testimonial, atau struktur navigasi) yang dibuat tanpa instruksi eksplisit atau konfirmasi? *(R-23)*
 - [ ] Apakah ada navbar link yang mengarah ke section atau halaman yang tidak ada? *(R-24)*
 - [ ] Apakah ada teks dengan kontras di bawah standar WCAG AA (4.5:1 teks normal, 3:1 teks besar)? *(R-25)*
-- [ ] Apakah ada tombol, dropdown, atau form yang tidak berfungsi tanpa keterangan `// TODO`? *(R-26)*
+- [ ] Apakah ada tombol, dropdown, atau form yang tidak melakukan apa pun, tanpa perilaku nyata dan tanpa `// TODO` + label yang terlihat? *(R-26)*
 - [ ] Apakah UI tidak punya empty state, loading state, atau error state? *(R-27)*
 - [ ] Apakah FAQ berisi pertanyaan generik yang tidak relevan dengan produk? *(R-28)*
 - [ ] Apakah palette warna melebihi 2-3 warna inti + 1 aksen tanpa design system yang jelas? *(R-29)*
 - [ ] Apakah desain secara keseluruhan terlihat seperti clone dari produk populer lain (Linear, Vercel, Stripe, Notion, dll.)? *(R-30)*
 - [ ] Apakah ada keputusan desain (warna, layout, typography, spacing, card, ilustrasi/ikon) yang tidak bisa dijelaskan alasannya? *(R-31)*
 - [ ] Apakah UI tidak bisa dinavigasi dengan keyboard (Tab, Enter, Escape) atau tidak ada focus state yang terlihat? *(R-32)*
+- [ ] Apakah ada fitur yang ditambahkan dengan patching source/CSS via script eksternal, bukan ditulis langsung di source? *(R-33)*
+- [ ] Jika ada theme toggle, apakah salah satu mode (light atau dark) merusak styles, font, atau layout? *(R-34)*
+- [ ] Apakah app dijalankan/di-build dan setiap elemen interaktif diuji sebelum diserahkan? *(R-35)*
+- [ ] Apakah ada klaim keamanan, kepatuhan, performa, atau pelanggan yang dikarang? *(R-36)*
 
-**Jika ada 1 saja yang dijawab "ya", perbaiki sebelum lanjut.**
+Jika satu saja jawaban **ya**, jangan serahkan. Perbaiki, jalankan ulang gate, dan baru kemudian kirim. Penyerahan tanpa gate yang bersih adalah kegagalan.
