@@ -7,7 +7,7 @@
 
 ![banner](./assets/banner.png)
 
-> Design rules to stop AI coding agents from generating generic UI ("AI slop"). Includes 32 enforceable rules and a ready-to-use pre-ship checklist.
+> Design rules to stop AI coding agents from generating generic UI ("AI slop"). Includes 36 enforceable rules and a mandatory delivery gate.
 
 ---
 
@@ -16,8 +16,12 @@
 `ANTISLOP.md` is a specialist rules document for UI/UX design work, designed to be **read on-demand** by AI coding agents, not force-loaded into every session regardless of the task. The file contains:
 
 - **Part 1:** Recognizable AI slop patterns (generic blue-purple gradients, excessive glassmorphism, marketing buzzwords, etc.)
-- **Part 2:** 32 mandatory rules (R-01 to R-32) the agent must follow when producing a design
-- **Checklist:** 32 verification questions, one per rule, for the agent to answer before a design is considered done
+- **Part 2:** 36 mandatory rules (R-01 to R-36) the agent must follow when producing a design
+- **Craftsmanship Standard:** five preference-agnostic quality criteria (intentionality, functional completeness, content-driven composition, resilience, evidence over claims)
+- **Functional Patterns:** concrete meanings of "a working button" for static landing pages
+- **Checklist:** a mandatory Delivery Gate, one verification question per rule, the agent must run and report before delivering
+
+> `ANTISLOP.md` is a **filter, not a style guide**. It does not impose an aesthetic: no prescribed colors, fonts, or layouts. Design preferences and brand direction are yours. The document only (1) lists generic AI patterns to avoid and (2) holds results to a craftsmanship bar (intentional, functional, complete, evidence-based).
 
 ---
 
@@ -71,10 +75,13 @@ Then place the file wherever your other agent rules files live.
 
 ```
 ANTISLOP.md
+├── What This Is               # it's a filter, not a style guide
 ├── Core Principle             # key question: "swap the logo, is it still unique?"
-├── Part 1: Slop Patterns      # reference list of AI slop patterns (7 categories)
-├── Part 2: Mandatory Rules    # R-01 to R-32, detailed rules per topic
-└── Pre-Ship Checklist         # 32 verification questions, 1:1 with each rule
+├── Craftsmanship Standard     # 5 quality criteria (C-1..C-5)
+├── Part 1: Slop Patterns      # reference list of AI slop patterns
+├── Part 2: Mandatory Rules    # R-01 to R-36, detailed rules per topic
+├── Functional Patterns        # what "works" means for interactive elements
+└── Delivery Gate              # mandatory checklist, 1:1 with each rule
 ```
 
 ---
