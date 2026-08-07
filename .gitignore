@@ -1,0 +1,6 @@
+# Dokumen audit/review internal — tidak untuk dipublish ke repo
+docs/
+
+# OS noise
+.DS_Store
+Thumbs.db
