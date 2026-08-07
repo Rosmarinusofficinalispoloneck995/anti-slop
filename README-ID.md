@@ -87,4 +87,4 @@ Pull request terbuka untuk menambah pola AI slop baru, memperjelas rule yang amb
 
 ## License
 
-MIT — see [LICENSE](LICENSE)
+MIT — [LICENSE](LICENSE)
