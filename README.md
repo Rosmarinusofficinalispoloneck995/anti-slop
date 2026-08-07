@@ -87,4 +87,4 @@ PRs are welcome for adding new AI slop patterns, clarifying ambiguous rules, or 
 
 ## License
 
-MIT — see [LICENSE](LICENSE)
+MIT — [LICENSE](LICENSE)
